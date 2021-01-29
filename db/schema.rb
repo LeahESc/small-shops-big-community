@@ -14,10 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_230800) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "shop_id"
-    t.string "street_address"
-    t.string "city"
-    t.string "state"
-    t.string "zipcode"
+    t.string "full_address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
