@@ -50,7 +50,7 @@ class ShopsController < ApplicationController
       :description,
       :social_impact,
       :category_id, 
-      category_attributes: [name:],
+      category_attributes: [:name],
       tag_ids: []
       )
     end

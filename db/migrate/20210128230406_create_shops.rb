@@ -4,6 +4,8 @@ class CreateShops < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :social_impact
+      t.string :website
+      t.string :address
       t.integer :category_id
 
       t.timestamps
