@@ -3,9 +3,14 @@ class ShopsController < ApplicationController
 
   # GET /shops
   def index
-    @shops = Shop.all
+    # binding.pry
+    if params[:category_id]
+      shops = Category.find(params[:category_id]).shops
+    else 
+      shops = Shop.all
+    end
 
-    render json: @shops
+    render json: shops
   end
 
   # GET /shops/1
