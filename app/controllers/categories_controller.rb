@@ -3,9 +3,9 @@ class CategoriesController < ApplicationController
 
   # GET /categories
   def index
-    @categories = Category.all
+    categories = Category.all
 
-    render json: @categories
+    render json: categories
   end
 
   # GET /categories/1
@@ -15,12 +15,12 @@ class CategoriesController < ApplicationController
 
   # POST /categories
   def create
-    @category = Category.new(category_params)
+    category = Category.new(category_params)
 
-    if @category.save
-      render json: @category, status: :created, location: @category
+    if @ategory.save
+      render json: category, status: :created, location: category
     else
-      render json: @category.errors, status: :unprocessable_entity
+      render json: category.errors, status: :unprocessable_entity
     end
   end
 

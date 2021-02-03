@@ -4,4 +4,5 @@ class Shop < ApplicationRecord
     has_many :tags, through: :shop_tags
     has_many :reviews
     accepts_nested_attributes_for :tags
+    accepts_nested_attributes_for :reviews
 end
