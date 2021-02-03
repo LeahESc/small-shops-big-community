@@ -3,9 +3,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    reviews = Review.all
 
-    render json: @reviews
+    render json: reviews
   end
 
   # GET /reviews/1
@@ -15,12 +15,13 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    @review = Review.new(review_params)
+    # binding.pry
+    review = Review.new(review_params)
 
-    if @review.save
-      render json: @review, status: :created, location: @review
+    if review.save
+      render json: review, status: :created, location: review
     else
-      render json: @review.errors, status: :unprocessable_entity
+      render json: review.errors, status: :unprocessable_entity
     end
   end
 
