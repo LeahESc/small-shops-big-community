@@ -56,7 +56,9 @@ class ShopsController < ApplicationController
       :social_impact,
       :category_id, 
       category_attributes: [:name],
-      tag_ids: []
+      tag_ids: [],
+      review_ids:[],
+      review_attributes: [:text]
       )
     end
 end
