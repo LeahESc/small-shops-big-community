@@ -58,7 +58,9 @@ class ShopsController < ApplicationController
       category_attributes: [:name],
       tag_ids: [],
       review_ids:[],
-      review_attributes: [:text]
+      review_attributes: [:text],
+      image_ids: [],
+      image_attributes: [:url]
       )
     end
 end
