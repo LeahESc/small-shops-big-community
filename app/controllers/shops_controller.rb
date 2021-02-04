@@ -20,9 +20,10 @@ class ShopsController < ApplicationController
 
   # POST /shops
   def create
-    @shop = Shop.new(shop_params)
+    shop = Shop.new(shop_params)
+    shop.tag_ids = params[:tag_ids]
 
-    if @shop.save
+    if shop.save
       render json: @shop, status: :created, location: @shop
     else
       render json: @shop.errors, status: :unprocessable_entity
@@ -54,9 +55,12 @@ class ShopsController < ApplicationController
       params.require(:shop).permit(:name, 
       :description,
       :social_impact,
+      :address,
+      :website,
       :category_id, 
       category_attributes: [:name],
       tag_ids: [],
+      tags: [],
       review_ids:[],
       review_attributes: [:text],
       image_ids: [],

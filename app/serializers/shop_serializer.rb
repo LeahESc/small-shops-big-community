@@ -1,5 +1,5 @@
 class ShopSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :social_impact, :address, :website, :category_id, :tags, :reviews, :images
+  attributes :id, :name, :description, :social_impact, :address, :website, :category_id, :tags, :tag_ids, :reviews, :images
   belongs_to :category
   has_many :reviews
   has_many :images
