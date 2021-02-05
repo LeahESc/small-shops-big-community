@@ -3,9 +3,9 @@ class ShopTagsController < ApplicationController
 
   # GET /shop_tags
   def index
-    @shop_tags = ShopTag.all
+    shop_tags = ShopTag.all
 
-    render json: @shop_tags
+    render json: shop_tags
   end
 
   # GET /shop_tags/1
@@ -15,12 +15,12 @@ class ShopTagsController < ApplicationController
 
   # POST /shop_tags
   def create
-    @shop_tag = ShopTag.new(shop_tag_params)
+    shop_tag = ShopTag.new(shop_tag_params)
 
-    if @shop_tag.save
-      render json: @shop_tag, status: :created, location: @shop_tag
+    if shop_tag.save
+      render json: shop_tag, status: :created, location: @shop_tag
     else
-      render json: @shop_tag.errors, status: :unprocessable_entity
+      render json: shop_tag.errors, status: :unprocessable_entity
     end
   end
 

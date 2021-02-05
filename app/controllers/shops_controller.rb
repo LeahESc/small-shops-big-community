@@ -24,9 +24,9 @@ class ShopsController < ApplicationController
     shop.tag_ids = params[:tag_ids]
 
     if shop.save
-      render json: @shop, status: :created, location: @shop
+      render json: shop, status: :created, location: shop
     else
-      render json: @shop.errors, status: :unprocessable_entity
+      render json: shop.errors, status: :unprocessable_entity
     end
   end
 
