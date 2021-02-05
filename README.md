@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# SMALL SHOPS BIG COMMUNITY Application 
 
-Things you may want to cover:
+Welcome to SMALL SHOPS BIG COMMUNITY backend! This is a yelp-style application made to champion small businesses and the richly diverse fabric of local shops in Los Angeles! This project uses a REACT front end and a Rails API for its backend. The frontend for this project can be found here: https://github.com/LeahESc/small-shops-big-community-react
 
-* Ruby version
+## Installation
+Clone this repository, find the frontend and execute:
 
-* System dependencies
+    $npm install
 
-* Configuration
+    To install all of the necessary react packages
 
-* Database creation
+In the backend, execute:
 
-* Database initialization
+    $rails db:migrate 
 
-* How to run the test suite
+Then: 
 
-* Services (job queues, cache servers, search engines, etc.)
+    $rails db:seed 
 
-* Deployment instructions
+    This is necessary to begin using the app. The app is both open-sourced but also includes a bunch of pre-seeded data.
 
-* ...
+## Usage
+Usage of this React-Redux app is to allow a user to search for and find independently-owned shops and businesses in LA.  
+
+## Contributing
+ This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
