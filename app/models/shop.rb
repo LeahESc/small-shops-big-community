@@ -7,4 +7,7 @@ class Shop < ApplicationRecord
     accepts_nested_attributes_for :tags
     accepts_nested_attributes_for :reviews
     accepts_nested_attributes_for :images
+    validates :name, presence: true 
+    validates :address, presence: true
+    validates :website, presence: true
 end

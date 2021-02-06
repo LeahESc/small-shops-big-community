@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
     belongs_to :shop
-    scope :latest, -> { order created_at: :desc}
+    validates :text, presence: true
 end
